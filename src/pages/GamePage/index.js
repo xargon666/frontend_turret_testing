@@ -3,28 +3,41 @@ import './style.css';
 
 const GamePage = () => {
 
-    const [questionText, updateQuestion] = useState('placeholder text')
+    const [questionText, updateQuestion] = useState({ title: "placeholder" })
+    // const [loading, setLoading] = useState(true);
+    // const [error, setError] = useState(null);
     const [questionCounter, updateQuestionCounter] = useState(0)
 
     useEffect(() => {
-        nextQuestion();
+        fetchQuestion();
     }, [])
 
-    const nextQuestion = async () => {
+    const fetchQuestion = async () => {
         let questionIndex = questionCounter + 1
         updateQuestionCounter(questionCounter + 1)
-        const res = fetch(`https://jsonplaceholder.typicode.com/posts/${questionIndex}`)
+        const res = await fetch(
+            `https://jsonplaceholder.typicode.com/posts/${questionIndex}`,
+            {
+                method: "GET"
+            }
+        )
+        console.log({ res })
         updateQuestion(await res.json())
     }
 
     return (
         <>
             <h1>I am the Game page!</h1>
-            <span>{questionText}</span>
-            <button
-                className='next-question-button'
-                onClick={() => nextQuestion()}
-            ></button>
+            <div className="gamepage-content">
+                <span>{
+                    questionText.title
+                }
+                </span>
+                <button
+                    className='next-question-button'
+                    onClick={() => fetchQuestion()}
+                >Next Question</button>
+            </div>
         </>
     )
 }
