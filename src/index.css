@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Bungee+Outline&family=Bungee+Shade&family=Didact+Gothic&family=Outfit:wght@400;700&display=swap');
+
+:root {
+    --bungee-inline: 'Bungee Inline', cursive;
+    --bungee-outline: 'Bungee Outline', cursive;
+    --bungee-shade: 'Bungee Shade', cursive;
+    --didact-gothic: 'Didact Gothic', sans-serif;
+    --outfit: 'Outfit', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
