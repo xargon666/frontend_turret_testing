@@ -30,7 +30,7 @@ const Home = () => {
                 </div>
                 <div className="page-hero-content">
                     <div className="turrent-img">
-                        <img src={turrentImg} alt="cartoon turret" />
+                        <img className='hero-turrent-img' src={turrentImg} alt="cartoon turret" />
                     </div>
                     <p className='homepage-content-p'>
                         expect(testing).toBe(fun);</p>

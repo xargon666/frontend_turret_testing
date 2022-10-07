@@ -26,6 +26,11 @@
     font-weight: 400;
     font-family: var(--bungee-inline);
     margin-right: 30rem;
+
+    /* remove the abilit to highlight the text on screen */
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
 }
 
 .homepage-title-outlined {
@@ -35,6 +40,19 @@
     color: #400E63;
     font-weight: 400;
     font-family: var(--bungee-outline);
+
+    /* remove the abilit to highlight the text on screen */
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+.hero-turrent-img {
+
+    /* remove the abilit to highlight the text on screen */
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
 }
 
 /* position and style landing page txt and btns */
@@ -54,6 +72,11 @@
     text-align: center;
     margin-bottom: 5rem;
     letter-spacing: 0.8rem;
+
+    /* remove the abilit to highlight the text on screen */
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
 }
 
 .page-hero-buttons {
@@ -119,4 +142,9 @@
     line-height: 34px;
     text-align: center;
     color: inherit;
+
+    /* remove the abilit to highlight the text on screen */
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
 }
