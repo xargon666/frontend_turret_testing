@@ -74,14 +74,27 @@
     cursor: pointer;
     border: none;
     transition: all 0.2s ease-in-out;
+    rotate: 0deg;
 }
 
 .hero-btn-outer:hover {
     color: #400E63;
     background-color: #B6F486;
     font-family: var(--bungee-inline);
-
+    animation: shift-right 0.2s ease-in-out infinite alternate;
+    transition: all 0.2s ease-in-out;
 }
+
+@keyframes shift-right {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(10px);
+    }
+}
+
 
 .hero-btn-inner {
     width: 100%;
