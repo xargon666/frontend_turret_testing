@@ -3,10 +3,15 @@ import './style.css';
 import { useNavigate } from 'react-router-dom';
 import turrentImg from '../../assets/imgs/turret_img.png'
 import 'animate.css';
+import { useEffect } from 'react';
 
 
 const Home = () => {
     const navigate = useNavigate();
+
+    useEffect(() => {
+        document.querySelector('#tab-title').innerHTML = 'Turrent Testing | Home';
+    })
 
     return (
         <>
