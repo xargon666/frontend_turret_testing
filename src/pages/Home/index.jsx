@@ -3,10 +3,15 @@ import './style.css';
 import { useNavigate } from 'react-router-dom';
 import turrentImg from '../../assets/imgs/turret_img.png'
 import 'animate.css';
+import { useEffect } from 'react';
 
 
 const Home = () => {
     const navigate = useNavigate();
+
+    useEffect(() => {
+        document.querySelector('#tab-title').innerHTML = 'Turrent Testing | Home';
+    })
 
     return (
         <>
@@ -25,13 +30,13 @@ const Home = () => {
                 </div>
                 <div className="page-hero-content">
                     <div className="turrent-img">
-                        <img src={turrentImg} alt="cartoon turret" />
+                        <img className='hero-turrent-img' src={turrentImg} alt="cartoon turret" />
                     </div>
                     <p className='homepage-content-p'>
                         expect(testing).toBe(fun);</p>
                 </div>
                 <div className="page-hero-buttons">
-                    <button onClick={() => navigate('/GamePage')} className='hero-btn-outer animate__animated animate__bounce'>
+                    <button onClick={() => navigate('/GamePage')} className='hero-btn-outer'>
                         <div className='hero-btn-inner'>
                             <span className='hero-btn-text'>Play</span>
                         </div>

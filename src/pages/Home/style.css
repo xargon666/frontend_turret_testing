@@ -26,6 +26,11 @@
     font-weight: 400;
     font-family: var(--bungee-inline);
     margin-right: 30rem;
+
+    /* remove the abilit to highlight the text on screen */
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
 }
 
 .homepage-title-outlined {
@@ -35,6 +40,19 @@
     color: #400E63;
     font-weight: 400;
     font-family: var(--bungee-outline);
+
+    /* remove the abilit to highlight the text on screen */
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+.hero-turrent-img {
+
+    /* remove the abilit to highlight the text on screen */
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
 }
 
 /* position and style landing page txt and btns */
@@ -53,6 +71,12 @@
     line-height: 66px;
     text-align: center;
     margin-bottom: 5rem;
+    letter-spacing: 0.8rem;
+
+    /* remove the abilit to highlight the text on screen */
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
 }
 
 .page-hero-buttons {
@@ -73,14 +97,27 @@
     cursor: pointer;
     border: none;
     transition: all 0.2s ease-in-out;
+    rotate: 0deg;
 }
 
 .hero-btn-outer:hover {
     color: #400E63;
     background-color: #B6F486;
     font-family: var(--bungee-inline);
-
+    animation: shift-right 0.2s ease-in-out infinite alternate;
+    transition: all 0.2s ease-in-out;
 }
+
+@keyframes shift-right {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(10px);
+    }
+}
+
 
 .hero-btn-inner {
     width: 100%;
@@ -105,4 +142,9 @@
     line-height: 34px;
     text-align: center;
     color: inherit;
+
+    /* remove the abilit to highlight the text on screen */
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
 }
