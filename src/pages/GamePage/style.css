@@ -1,0 +1,46 @@
+body{
+    background: radial-gradient(#88D4C3, #A8AEDD);
+    background-repeat: no-repeat;
+}
+
+h1{
+    font-family: Outfit, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #170524;
+}
+
+p{
+    font-family: Outfit, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.text-editor{
+    margin-bottom: 15px;
+}
+
+
+#content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2;
+    grid-column-gap: 4vw;
+    padding: 2vw 4vw;
+}
+
+#content .console-side{
+    max-width: 760px;
+    background-color: #400E63;
+    border-radius: 20px;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    align-items: center;
+    justify-items: center;
+    
+}
+
+#content .editor-side button{
+    justify-self: end;
+}
+
