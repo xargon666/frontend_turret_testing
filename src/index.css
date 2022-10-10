@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Bungee+Shade&family=Outfit:wght@400;500;600;700;800;900&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.button{
+    background: #400E63;
+    color: #B6F486;
+    padding: 8px 30px;
+    border: 2px solid #B6F486;
+    border-radius: 15px;
+    font-family: 'Bungee Inline';
+    font-size: 18px;
+}
