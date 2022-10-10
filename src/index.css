@@ -12,13 +12,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
-.button{
-    background: #400E63;
-    color: #B6F486;
-    padding: 8px 30px;
-    border: 2px solid #B6F486;
-    border-radius: 15px;
-    font-family: 'Bungee Inline';
-    font-size: 18px;
 }
+    
+

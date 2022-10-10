@@ -1,6 +1,6 @@
 .page-container {
     width: 100vw;
-    height: 100vh;
+    /* height: 100vh; */
     background: radial-gradient(74.44% 50% at 50% 50%, #B6F486 0%, #A8AEDD 100%);
 
 }
@@ -39,7 +39,7 @@
     font-size: 112px;
     color: #400E63;
     font-weight: 400;
-    font-family: var(--bungee-outline);
+    font-family: var(--bungee-shade);
 
     /* remove the abilit to highlight the text on screen */
     user-select: none;
@@ -47,7 +47,7 @@
     -webkit-user-select: none;
 }
 
-.hero-turrent-img {
+.hero-turret-img {
 
     /* remove the abilit to highlight the text on screen */
     user-select: none;
@@ -64,14 +64,14 @@
 }
 
 .homepage-content-p {
-    font-family: var(--didact-gothic);
+    font-family: Consolas;
     font-style: normal;
     font-weight: 400;
     font-size: 50px;
     line-height: 66px;
     text-align: center;
     margin-bottom: 5rem;
-    letter-spacing: 0.8rem;
+    /* letter-spacing: 0.2rem; */
 
     /* remove the abilit to highlight the text on screen */
     user-select: none;
