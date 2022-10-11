@@ -36,7 +36,11 @@ const Home = () => {
                         expect('testing').toBe('fun');</p>
                 </div>
                 <div className="page-hero-buttons">
+<<<<<<< HEAD
                     <button onClick={() => navigate('/game')} className='hero-btn-outer'>
+=======
+                    <button onClick={() => navigate('/settings')} className='hero-btn-outer'>
+>>>>>>> 638e94f (adds settings page and the buttons values in data/settingsPageData)
                         <div className='hero-btn-inner'>
                             <span className='hero-btn-text'>Play</span>
                         </div>
