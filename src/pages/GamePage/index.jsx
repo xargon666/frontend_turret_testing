@@ -38,7 +38,10 @@ const GamePage = () => {
                 <div className='text-editor'>
                     <TextEditor />
                 </div>            
-                <button onClick={() => navigate('/game')} className='next-btn-outer'>
+                <button 
+                onClick={() => fetchQuestion()} 
+                className='next-btn-outer'
+                >
                     <div className='next-btn-inner'>
                         <span className='next-btn-text'>Next</span>
                     </div>
