@@ -1,6 +1,9 @@
 body{
     background: radial-gradient(#88D4C3, #A8AEDD);
     background-repeat: no-repeat;
+    
+    /* added here but this is probably not the best place for it */
+    height:100vh;
 }
 
 #content{
