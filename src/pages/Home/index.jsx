@@ -1,8 +1,8 @@
 import React from 'react';
 import './style.css';
 import { useNavigate } from 'react-router-dom';
-import turrentImg from '../../assets/imgs/turret_img.png'
-import 'animate.css';
+import turretImg from '../../assets/imgs/turret_img.png';
+// import 'animate.css';
 import { useEffect } from 'react';
 
 
@@ -10,7 +10,7 @@ const Home = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        document.querySelector('#tab-title').innerHTML = 'Turrent Testing | Home';
+        document.querySelector('#tab-title').innerHTML = 'Turret Testing | Home';
     })
 
     return (
@@ -29,14 +29,14 @@ const Home = () => {
                     </div>
                 </div>
                 <div className="page-hero-content">
-                    <div className="turrent-img">
-                        <img className='hero-turrent-img' src={turrentImg} alt="cartoon turret" />
+                    <div className="turret-img">
+                        <img className='hero-turret-img' src={turretImg} alt="cartoon turret" />
                     </div>
                     <p className='homepage-content-p'>
-                        expect(testing).toBe(fun);</p>
+                        expect('testing').toBe('fun');</p>
                 </div>
                 <div className="page-hero-buttons">
-                    <button onClick={() => navigate('/GamePage')} className='hero-btn-outer'>
+                    <button onClick={() => navigate('/game')} className='hero-btn-outer'>
                         <div className='hero-btn-inner'>
                             <span className='hero-btn-text'>Play</span>
                         </div>

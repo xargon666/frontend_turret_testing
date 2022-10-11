@@ -1,0 +1,11 @@
+.kudos-page-container{
+    background: radial-gradient(#B6F486, #88D4C3);
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.congrats-msg{
+    font-family: var(--bungee-inline);
+    font-size: 3rem;
+    color: #400E63;
+}
