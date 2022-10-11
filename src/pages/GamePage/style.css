@@ -1,4 +1,103 @@
+
 .gamepage-content {
     display:flex;
     flex-direction: column;
+}
+
+body{
+    background: radial-gradient(#88D4C3, #A8AEDD);
+    background-repeat: no-repeat;
+}
+
+#content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 8vw;
+    padding: 2vw 5vw;
+}
+
+.editor-side {
+    display: grid;
+}
+
+.test-title{
+    margin: 1.5vw 0;
+    font-family: var(--outfit);
+    font-size: 2rem;
+    font-weight: 700;
+    color: #170524;
+}
+
+.test-instructions{
+    font-family: var(--outfit);
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #170524;
+}
+
+.text-editor{
+    margin: 3vw 0 1.5vw;
+}
+
+.next-btn-outer{
+    background: #400E63;
+    color: #B6F486;
+    padding: 8px 12px;
+    border-radius: 15px;
+    font-family: var(--bungee-inline);  
+    justify-self: end;
+    cursor: pointer;
+}
+
+.next-btn-outer:hover{
+    color: #400E63;
+    background-color: #B6F486;
+    font-family: var(--bungee-inline);
+    animation: shift-right 0.2s ease-in-out infinite alternate;
+    transition: all 0.2s ease-in-out;
+    border: none;
+}
+
+@keyframes shift-right {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(10px);
+    }
+}
+
+.next-btn-inner{
+    padding: 0 1rem;
+    box-sizing: border-box;
+    border: 1px solid #B6F486;
+    background-color: transparent;
+    color: inherit;
+    font-family: inherit;
+    justify-content: center;
+    align-items: center;
+}
+    
+
+.next-btn-text{
+    text-decoration: none;
+    font-family: var(--bungee-inline);
+    font-style: normal;
+    font-size: 18px;
+    text-align: center;
+    color: inherit;
+
+    /* remove the abilit to highlight the text on screen */
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+.terminal-side{
+    max-width: 760px;
+    background-color: #400E63;
+    border-radius: 20px;
+    grid-column: 2/3;
+    justify-items: center; 
 }
