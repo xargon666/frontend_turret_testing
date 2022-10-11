@@ -11,20 +11,26 @@ const KudosPage = () => {
         
         <div className='kudos-page-container'>
             <div>
-            <img src={logo} alt='logo' />
+                <img src={logo} alt='logo' />
             </div>
 
-            <div className='congrats-msg-container'>
-                <div className="turret-img">
-                    <img className='hero-turret-img' src={turretImg} alt="cartoon turret" />
+            <div className='congrats-msg-content'>
+                <div className='turret-img-kudos'>
+                    <img className='hero-turret-img' src={turretImg} alt='cartoon turret' />
                 </div>
                 <h1 className='congrats-msg'>Great Work !!!</h1>
             </div>
 
-            <div className='whats-next-container'>
-                <h2>What's next ?</h2>
-                <h3 onClick={() => navigate('/settings')}>Move on to next level</h3>
-                <h3 onClick={() => navigate('/settings')}>Try another language</h3>
+            <div className='whats-next-content'>
+                <div className='whats-next-inner'>
+                    <div className='h2-title'>
+                        <h2>What's next ?</h2>
+                    </div>
+                    <ul className='h3-title'>
+                        <li><h3 onClick={() => navigate('/settings')}>Move on to next level</h3></li>                        
+                        <li><h3 onClick={() => navigate('/settings')}>Try another language</h3></li>
+                    </ul>
+                </div>
             </div>
         </div>
         

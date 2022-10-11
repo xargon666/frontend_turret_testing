@@ -1,11 +1,73 @@
 .kudos-page-container{
     background: radial-gradient(#B6F486, #88D4C3);
     background-repeat: no-repeat;
-    height: 100vh;
+    padding: 2vw 5vw;
+    display: grid;
+    align-items: center;
+    justify-items: center; 
+}
+
+.congrats-msg-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;     
+    margin: 8vw 0;
+    /* border: 3px solid #400E63;   */
 }
 
 .congrats-msg{
-    font-family: var(--bungee-inline);
+    font-family: var(--bungee-inline); 
     font-size: 3rem;
     color: #400E63;
+    /* border: 3px solid #400E63; */
+}
+
+.turret-img-kudos{
+    justify-self: center;
+}
+
+.whats-next-content{
+    padding: 3vw;
+    background-color: #8769B6;
+    border-radius: 20px;
+    /* border: 3px solid #400E63; */
+}
+
+.whats-next-inner{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(200px, auto);
+    grid-gap: 5vw;
+    padding: 4vw;
+    box-sizing: border-box;
+    border: 1.7px solid #B6F486;
+    background-color: transparent;
+    color: inherit;
+    font-family: inherit;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.h2-title{
+    font-family: var(--outfit);
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #B6F486;
+    align-self: center;
+}
+
+.h3-title{
+    font-family: var(--outfit);
+    font-size: 1.5rem;
+    font-weight: 500;
+    align-self: center;
+    color: #A8AEDD;
+    cursor: pointer;
+    transition: 1s font-size ease-out
+
+}
+
+.h3-title:hover{
+    color: #B6F486;
+    font-size: 2rem;
 }
