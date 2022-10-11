@@ -1,35 +1,40 @@
 .kudos-page-container{
-    background: radial-gradient(#B6F486, #88D4C3);
-    background-repeat: no-repeat;
-    padding: 2vw 5vw;
     display: grid;
     align-items: center;
     justify-items: center; 
+    background: radial-gradient(#B6F486, #88D4C3);
+    background-repeat: no-repeat;
+    padding: 2vw 5vw;
 }
+
+
+/* styling congrats nessage and animation */
 
 .congrats-msg-content{
     display: grid;
-    grid-template-columns: 1fr 1fr;     
-    margin: 8vw 0;
-    /* border: 3px solid #400E63;   */
+    grid-template-columns: 1fr 2fr;     
+    grid-gap: 0;
+    margin: 7vw 0;
+}
+
+.turret-img-kudos{
+    justify-self: start;
 }
 
 .congrats-msg{
     font-family: var(--bungee-inline); 
-    font-size: 3rem;
+    font-size: 4.5rem;
     color: #400E63;
-    /* border: 3px solid #400E63; */
 }
 
-.turret-img-kudos{
-    justify-self: center;
-}
+
+/* styling "what's next" content */
 
 .whats-next-content{
     padding: 3vw;
+    margin-bottom: 5vw;
     background-color: #8769B6;
     border-radius: 20px;
-    /* border: 3px solid #400E63; */
 }
 
 .whats-next-inner{
@@ -37,18 +42,15 @@
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: minmax(200px, auto);
     grid-gap: 5vw;
+    justify-items: center;
+    align-items: center;
     padding: 4vw;
     box-sizing: border-box;
     border: 1.7px solid #B6F486;
     background-color: transparent;
-    color: inherit;
-    font-family: inherit;
-    justify-content: center;
-    align-items: center;
 }
 
-
-.h2-title{
+.h2-content{
     font-family: var(--outfit);
     font-size: 2.5rem;
     font-weight: 600;
@@ -56,15 +58,18 @@
     align-self: center;
 }
 
+.h3-content{
+    align-self: center;
+}
+
 .h3-title{
     font-family: var(--outfit);
-    font-size: 1.5rem;
-    font-weight: 500;
-    align-self: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    padding: 1vw;
     color: #A8AEDD;
     cursor: pointer;
-    transition: 1s font-size ease-out
-
+    transition: 0.8s font-size ease-in-out
 }
 
 .h3-title:hover{

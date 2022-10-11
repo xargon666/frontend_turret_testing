@@ -9,7 +9,7 @@ const KudosPage = () => {
 
     return (
         
-        <div className='kudos-page-container'>
+        <section className='kudos-page-container'>
             <div>
                 <img src={logo} alt='logo' />
             </div>
@@ -23,16 +23,16 @@ const KudosPage = () => {
 
             <div className='whats-next-content'>
                 <div className='whats-next-inner'>
-                    <div className='h2-title'>
+                    <div className='h2-content'>
                         <h2>What's next ?</h2>
                     </div>
-                    <ul className='h3-title'>
-                        <li><h3 onClick={() => navigate('/settings')}>Move on to next level</h3></li>                        
-                        <li><h3 onClick={() => navigate('/settings')}>Try another language</h3></li>
-                    </ul>
+                    <div className='h3-content'>
+                        <h3 className='h3-title' onClick={() => navigate('/settings')}>Move on to next level</h3>
+                        <h3 className='h3-title' onClick={() => navigate('/settings')}>Try another language</h3>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
         
     )
 }
