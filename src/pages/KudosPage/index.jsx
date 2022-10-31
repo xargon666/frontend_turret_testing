@@ -10,10 +10,7 @@ const KudosPage = () => {
     return (
         
         <section className='kudos-page-container'>
-            <div>
-                <img src={logo} alt='logo' />
-            </div>
-
+            <img src={logo} alt='logo' />
             <div className='congrats-msg-content'>
                 <div className='turret-img-kudos'>
                     <img className='hero-turret-img' src={turretImg} alt='cartoon turret' />
