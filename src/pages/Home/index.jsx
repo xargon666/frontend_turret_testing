@@ -36,7 +36,7 @@ const Home = () => {
                         expect('testing').toBe('fun');</p>
                 </div>
                 <div className="page-hero-buttons">
-                    <button onClick={() => navigate('/game')} className='hero-btn-outer'>
+                    <button onClick={() => navigate('/settings')} className='hero-btn-outer'>
                         <div className='hero-btn-inner'>
                             <span className='hero-btn-text'>Play</span>
                         </div>
