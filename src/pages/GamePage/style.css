@@ -3,7 +3,7 @@ body{
     background-repeat: no-repeat;
     
     /* added here but this is probably not the best place for it */
-    height:100vh;
+    height: 100vh;
 }
 
 #content{
@@ -42,6 +42,7 @@ body{
     padding: 8px 12px;
     border-radius: 15px;
     font-family: var(--bungee-inline);  
+    font-weight: 400;
     justify-self: end;
     cursor: pointer;
 }
@@ -50,6 +51,7 @@ body{
     color: #400E63;
     background-color: #B6F486;
     font-family: var(--bungee-inline);
+    font-weight: 400;
     animation: shift-right 0.2s ease-in-out infinite alternate;
     transition: all 0.2s ease-in-out;
     border: none;
@@ -80,6 +82,7 @@ body{
 .next-btn-text{
     text-decoration: none;
     font-family: var(--bungee-inline);
+    font-weight: 400;
     font-style: normal;
     font-size: 18px;
     text-align: center;

@@ -9,6 +9,7 @@
 
 .page-hero-title-container {
     width: 100%;
+    padding-bottom: 8vw;
 }
 
 .page-hero-title {
@@ -37,9 +38,10 @@
     margin: 0;
     margin-left: 12rem;
     font-size: 112px;
+    line-height: 34px;
     color: #400E63;
-    font-weight: 400;
     font-family: var(--bungee-shade);
+    font-weight: 400;
 
     /* remove the abilit to highlight the text on screen */
     user-select: none;
@@ -83,6 +85,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    padding: 4vw 0;
 }
 
 .hero-btn-outer {
@@ -104,6 +107,7 @@
     color: #400E63;
     background-color: #B6F486;
     font-family: var(--bungee-inline);
+    font-weight: 400;
     animation: shift-right 0.2s ease-in-out infinite alternate;
     transition: all 0.2s ease-in-out;
 }
@@ -135,7 +139,7 @@
 
 .hero-btn-text {
     text-decoration: none;
-    font-family: var(--bungee-outline);
+    font-family: var(--bungee-inline);
     font-style: normal;
     font-weight: 400;
     font-size: 28px;

@@ -15,12 +15,6 @@ const Home = () => {
 
     return (
         <>
-            {/* <h1>Home page</h1>
-            <Link to="/">Home</Link>
-            <Link to="/GamePage">Game Page</Link>
-            <Link to="/KudosPage">Kudos Page</Link>
-            <Link to="/SettingsPage">Settings Page</Link> */}
-
             <div className="page-container">
                 <div className="page-hero-title-container">
                     <div className="page-hero-title">
