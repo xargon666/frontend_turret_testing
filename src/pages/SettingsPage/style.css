@@ -23,7 +23,6 @@
     color: #170524;
     display: grid;
     justify-items: center;
-    border: 2px solid black;
 }
 
 .settings-cols h2{

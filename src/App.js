@@ -1,6 +1,7 @@
-import {Routes, Route} from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { Home, SettingsPage, GamePage, KudosPage } from './pages';
 import './index.css';
+
 
 function App() {
   return (
