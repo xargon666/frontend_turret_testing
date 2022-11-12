@@ -1,55 +1,67 @@
 import React from 'react';
 import logo from '../../assets/imgs/logo.png';
 import './style.css';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { getQuestions } from '../../Controllers/questionController';
+import { useSelector } from 'react-redux';
 
 const SettingsPage = () => {
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+    const question = useSelector(state => state.question.data);
+    const startGame = () => {
+        console.log('start game');
+        dispatch(getQuestions());
+        navigate('/game');
+    }
 
     return (
         <section className='settings-page-container'>
             <img src={logo} alt='logo' />
 
-            <form  method='post' className='settings-content'>
+            <form onSubmit={startGame} className='settings-content'>
                 <div className='settings-cols'>
-                    <h2>Languages</h2>                    
+                    <h2>Languages</h2>
                     <label className='select-box'>
                         <div className='select-box-inner'>
-                            <input type='radio' name='language'/>
-                                <span>Javascript</span>
+                            <input type='radio' name='language' />
+                            <span>Javascript</span>
                         </div>
                     </label>
                     <label className='select-box'>
                         <div className='select-box-inner'>
                             <input type='radio' name='language' />
-                                <span>Python</span>
+                            <span>Python</span>
                         </div>
                     </label>
                 </div>
-                
+
                 <div className='settings-cols'>
                     <h2>Level</h2>
                     <label className='select-box'>
                         <div className='select-box-inner'>
                             <input type='radio' name='level' />
-                                <span>Easy</span>
+                            <span>Easy</span>
                         </div>
                     </label>
                     <label className='select-box'>
                         <div className='select-box-inner'>
                             <input type='radio' name='level' />
-                                <span>Medium</span>
+                            <span>Medium</span>
                         </div>
                     </label>
                     <label className='select-box'>
                         <div className='select-box-inner'>
                             <input type='radio' name='level' />
-                                <span>Hard</span>
+                            <span>Hard</span>
                         </div>
                     </label>
                 </div>
 
                 <div>
                     <input type='submit' value='Continue' className='submit-btn' />
-                </div>            
+                </div>
             </form>
 
         </section>

@@ -1,23 +1,26 @@
-body{
+body {
     background: radial-gradient(#88D4C3, #A8AEDD);
     background-repeat: no-repeat;
-    
+
     /* added here but this is probably not the best place for it */
-    height:100vh;
+    height: 100vh;
 }
 
-#content{
+#content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 8vw;
     padding: 2vw 5vw;
+    height: 100vh;
 }
 
 .editor-side {
     display: grid;
+    height: 100%;
+    position: relative;
 }
 
-.test-title{
+.test-title {
     margin: 1.5vw 0;
     font-family: var(--outfit);
     font-size: 2rem;
@@ -25,34 +28,69 @@ body{
     color: #170524;
 }
 
-.test-instructions{
+.test-instructions {
     font-family: var(--outfit);
     font-size: 1.1rem;
     font-weight: 400;
     color: #170524;
 }
 
-.text-editor{
+.text-editor {
     margin: 3vw 0 1.5vw;
 }
 
-.next-btn-outer{
+.next-btn-outer {
     background: #400E63;
     color: #B6F486;
     padding: 8px 12px;
     border-radius: 15px;
-    font-family: var(--bungee-inline);  
+    font-family: var(--bungee-inline);
     justify-self: end;
     cursor: pointer;
+    border: 2px solid transparent;
+    margin-bottom: 5px;
 }
 
-.next-btn-outer:hover{
+.next-btn-disabled-outer {
+    background: #400E63;
+    color: #B6F486;
+    padding: 8px 12px;
+    border-radius: 15px;
+    font-family: var(--bungee-inline);
+    justify-self: end;
+    cursor: default;
+    border: 2px solid transparent;
+    margin-bottom: 5px;
+    opacity: 0.2;
+}
+
+.next-btn-outer:hover {
     color: #400E63;
     background-color: #B6F486;
     font-family: var(--bungee-inline);
     animation: shift-right 0.2s ease-in-out infinite alternate;
     transition: all 0.2s ease-in-out;
-    border: none;
+}
+
+.check-btn-outer {
+    position: relative;
+    background: #400E63;
+    color: #B6F486;
+    padding: 8px 12px;
+    border-radius: 15px;
+    font-family: var(--bungee-inline);
+    justify-self: end;
+    cursor: pointer;
+    border: 2px solid transparent;
+    margin: 15px 0;
+}
+
+.check-btn-outer:hover {
+    color: #400E63;
+    background-color: #B6F486;
+    font-family: var(--bungee-inline);
+    animation: shift-right 0.2s ease-in-out infinite alternate;
+    transition: all 0.2s ease-in-out;
 }
 
 @keyframes shift-right {
@@ -65,7 +103,7 @@ body{
     }
 }
 
-.next-btn-inner{
+.next-btn-inner {
     padding: 0 1rem;
     box-sizing: border-box;
     border: 1px solid #B6F486;
@@ -75,9 +113,20 @@ body{
     justify-content: center;
     align-items: center;
 }
-    
 
-.next-btn-text{
+.check-btn-inner {
+    padding: 0 1rem;
+    box-sizing: border-box;
+    border: 1px solid #B6F486;
+    background-color: transparent;
+    color: inherit;
+    font-family: inherit;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.next-btn-text {
     text-decoration: none;
     font-family: var(--bungee-inline);
     font-style: normal;
@@ -91,11 +140,18 @@ body{
     -webkit-user-select: none;
 }
 
-.terminal-side{
+.terminal-side {
     max-width: 760px;
     background-color: #400E63;
     border-radius: 20px;
     grid-column: 2/3;
-    justify-items: center; 
+    justify-items: center;
 }
 
+.terminal-window {
+    max-width: 760px;
+    background-color: #400E63;
+    border-radius: 20px;
+    grid-column: 2/3;
+    justify-items: center;
+}

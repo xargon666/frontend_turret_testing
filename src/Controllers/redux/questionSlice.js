@@ -9,26 +9,22 @@ export const questionSlice = createSlice({
         isLoading: false,
         error: null
     },
-    reducers: {
-        setCode: (state, action) => {
-            state.value = action.payload;
-        }
-    },
-    extraReducers: {
-        [getQuestions.pending]: (state, action) => {
-            state.isLoading = true;
-        },
-        [getQuestions.fulfilled]: (state, action) => {
-            state.isLoading = false;
-            state.value = action.payload;
-        },
-        [getQuestions.rejected]: (state, action) => {
-            state.isLoading = false;
-            state.error = action.error.message;
-        }
+    extraReducers(builder) {
+        builder
+            .addCase(getQuestions.pending, (state, action) => {
+                state.isLoading = true;
+            })
+            .addCase(getQuestions.fulfilled, (state, action) => {
+                const loadedQuestions = action.payload;
+                state.data = loadedQuestions;
+
+                state.isLoading = false;
+            })
+            .addCase(getQuestions.rejected, (state, action) => {
+                state.error = action.error;
+                state.isLoading = false;
+            })
     }
 });
-
-export const { setCode } = questionSlice.actions;
 
 export default questionSlice.reducer;
