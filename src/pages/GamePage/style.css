@@ -149,9 +149,13 @@ body {
 }
 
 .terminal-window {
+    position: relative;
     max-width: 760px;
     background-color: #400E63;
     border-radius: 20px;
     grid-column: 2/3;
     justify-items: center;
+    height: 100%;
+    padding: 2rem 2rem;
+    text-align: center;
 }

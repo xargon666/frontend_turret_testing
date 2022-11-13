@@ -1,6 +1,17 @@
-.console{
+.console {
     display: grid;
     justify-content: center;
+    position: relative;
+    height: 100%;
+    padding: 2rem 0;
+    grid-template-rows: 0.3fr 1fr;
 }
 
+.console h1 {
+    color: #fff;
+}
 
+.output-container {
+    width: 100%;
+    height: 100%;
+}
