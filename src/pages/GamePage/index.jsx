@@ -27,11 +27,21 @@ const GamePage = () => {
     // Check to see if the answer the user provided is the correct answer
     const checkCorrectAnswer = () => {
         console.log('checking answer');
-        if (code === question.data[questionCounter].jest_function_complete) {
+        console.log(JSON.stringify(code.replace(/(\r\n|\n|\r|\s|\n\s*\n)/gm, '')));
+        console.log(JSON.stringify(question.data[questionCounter].jest_function_complete.replace(/(\r\n|\n|\r|\s|\n\s*\n)/gm, '')));
+        if (
+            code.replace(/(\r\n|\n|\r|\s|\n\s*\n)/gm, '')
+            ==
+            question.data[questionCounter].jest_function_complete.replace(/(\r\n|\n|\r|\s|\n\s*\n)/gm, '')
+        ) {
             console.log('correct answer');
             setCorrectAnswer(true);
             setAnswerCheckFeedbackMsg("Correct Answer!")
-        } else if (code !== question.data[questionCounter].jest_function_complete) {
+        } else if (
+            code.replace(/\n\s/g, '')
+            !==
+            question.data[questionCounter].jest_function_complete.replace(/\n\s/g, '')
+        ) {
             console.log('incorrect answer');
             setCorrectAnswer(false);
             setAnswerCheckFeedbackMsg("Incorrect answer, try again!")
