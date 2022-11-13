@@ -31,7 +31,7 @@ const GamePage = () => {
         console.log(JSON.stringify(question.data[questionCounter].jest_function_complete.replace(/(\r\n|\n|\r|\s|\n\s*\n)/gm, '')));
         if (
             code.replace(/(\r\n|\n|\r|\s|\n\s*\n)/gm, '')
-            ==
+            ===
             question.data[questionCounter].jest_function_complete.replace(/(\r\n|\n|\r|\s|\n\s*\n)/gm, '')
         ) {
             console.log('correct answer');
