@@ -1,41 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ReactComponent as Turret } from '../../assets/imgs/turret.svg';
+import WordsAnim from '../../components/WordsAnimation';
 import './style.css';
 // import 'animate.css';
 
 
 const Home = () => {
-    const navigate = useNavigate();
-    const [phrase, setPhrase] = useState([]);  
-        
-    let i = 0;
-    let arr = [];
-        
-    function handleMessage() {
-        let message = ["expect", "('testing')", ".", "toBe", "('fun');"];
-        
-        setTimeout(() => {
-          arr.push(message[i]);
-          setPhrase(arr.toString().split(","));
-
-          i++;
-          
-          if (i < 5) {
-            handleMessage();
-          }
-        }, 300)
-    }
-
-
-    useEffect(() => {
-        handleMessage();
-    }, []);
-   
-    // useEffect(() => {
-    //     document.querySelector('#tab-title').innerHTML = 'Turret Testing | Home';       
-        
-    // }, [])
+    const navigate = useNavigate();    
 
     return (
         <>
@@ -50,7 +22,9 @@ const Home = () => {
                     <div className="turret-img">
                         <Turret className='hero-turret-img' alt="cartoon turret" />
                     </div>
-                    <p className='homepage-content-p'>{phrase}</p>
+                    <div className='homepage-content-p'>
+                        <WordsAnim/>
+                    </div>
                 </div>
                 <div className="page-hero-buttons">
                     <button onClick={() => navigate('/settings')} className='hero-btn-outer'>
@@ -67,3 +41,7 @@ const Home = () => {
 
 export default Home;
 
+ // useEffect(() => {
+    //     document.querySelector('#tab-title').innerHTML = 'Turret Testing | Home';       
+        
+    // }, [])
