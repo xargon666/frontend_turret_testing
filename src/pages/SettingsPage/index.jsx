@@ -47,7 +47,7 @@ const SettingsPage = () => {
                     </label>
                 </div>
 
-                <div>
+                <div className='submit-container'>
                     <input type='submit' value='Continue' className='submit-btn' />
                 </div>            
             </form>

@@ -1,26 +1,16 @@
 import React from 'react';
-import './style.css';
 import { useNavigate } from 'react-router-dom';
-import turretImg from '../../assets/imgs/turret_img.png';
+import { ReactComponent as Turret } from '../../assets/imgs/turret.svg';
+import WordsAnim from '../../components/WordsAnimation';
+import './style.css';
 // import 'animate.css';
-import { useEffect } from 'react';
 
 
 const Home = () => {
-    const navigate = useNavigate();
-
-    useEffect(() => {
-        document.querySelector('#tab-title').innerHTML = 'Turret Testing | Home';
-    })
+    const navigate = useNavigate();    
 
     return (
         <>
-            {/* <h1>Home page</h1>
-            <Link to="/">Home</Link>
-            <Link to="/GamePage">Game Page</Link>
-            <Link to="/KudosPage">Kudos Page</Link>
-            <Link to="/SettingsPage">Settings Page</Link> */}
-
             <div className="page-container">
                 <div className="page-hero-title-container">
                     <div className="page-hero-title">
@@ -30,10 +20,11 @@ const Home = () => {
                 </div>
                 <div className="page-hero-content">
                     <div className="turret-img">
-                        <img className='hero-turret-img' src={turretImg} alt="cartoon turret" />
+                        <Turret className='hero-turret-img' alt="cartoon turret" />
                     </div>
-                    <p className='homepage-content-p'>
-                        expect('testing').toBe('fun');</p>
+                    <div className='homepage-content-p'>
+                        <WordsAnim/>
+                    </div>
                 </div>
                 <div className="page-hero-buttons">
                     <button onClick={() => navigate('/settings')} className='hero-btn-outer'>
@@ -49,3 +40,8 @@ const Home = () => {
 }
 
 export default Home;
+
+ // useEffect(() => {
+    //     document.querySelector('#tab-title').innerHTML = 'Turret Testing | Home';       
+        
+    // }, [])
