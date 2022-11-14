@@ -1,5 +1,5 @@
 body{
-    background: radial-gradient(#88D4C3, #A8AEDD);
+    background: radial-gradient(var(--blue-green), var(--blue-purple));
     background-repeat: no-repeat;
     
     /* added here but this is probably not the best place for it */
@@ -22,14 +22,14 @@ body{
     font-family: var(--outfit);
     font-size: 2rem;
     font-weight: 700;
-    color: #170524;
+    color: var(--almost-black);
 }
 
 .test-instructions{
     font-family: var(--outfit);
     font-size: 1.1rem;
     font-weight: 400;
-    color: #170524;
+    color: var(--almost-black);
 }
 
 .text-editor{

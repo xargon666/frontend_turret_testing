@@ -8,6 +8,12 @@ import './style.css';
 
 const Home = () => {
     const navigate = useNavigate();    
+     
+    
+    // useEffect(() => {
+    //     document.querySelector('#tab-title').innerHTML = 'Turret Testing | Home';       
+        
+    // }, [])
 
     return (
         <>
@@ -41,7 +47,4 @@ const Home = () => {
 
 export default Home;
 
- // useEffect(() => {
-    //     document.querySelector('#tab-title').innerHTML = 'Turret Testing | Home';       
-        
-    // }, [])
+
