@@ -4,7 +4,7 @@
     justify-items: center; 
     background: radial-gradient(var(--light-green), var(--blue-purple));
     background-repeat: no-repeat;
-    padding: 2vw 5vw;
+    padding: 2vw 5vw 5vw;
 }
 
 .settings-options{
@@ -76,17 +76,20 @@
 }
 
 .submit-btn{
-    align-self: center;
+    align-self: end;
     justify-self: end;
     color: var(--purple);
     font-family: var(--outfit);
     font-weight: 700;
-    font-size: 2.5rem;
+    font-size: 2rem;
     background-color: transparent;
 }
 
 .mini-turret-img{
-    height: 100px;
+    height: 50px;
     justify-self: start;
 }
 
+.mini-turret-img:hover{
+    
+}
