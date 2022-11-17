@@ -1,6 +1,6 @@
 .page-container {
     width: 100vw;
-    background: radial-gradient(74.44% 50% at 50% 50%, #B6F486 0%, #A8AEDD 100%);
+    background: radial-gradient(74.44% 50% at 50% 50%, var(--light-green) 0%, var(--blue-purple) 100%);
 }
 
 /* position and style heading */
@@ -21,7 +21,7 @@
 .homepage-title {
     margin: 0;
     font-size: 92px;
-    color: #400E63;
+    color: var(--purple);
     font-weight: 400;
     font-family: var(--bungee-inline);
     margin-right: 30rem;
@@ -156,12 +156,12 @@
 .hero-btn-outer {
     width: 290px;
     height: 100px;
-    background: #400E63;
+    background: var(--purple);
     border-radius: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #B6F486;
+    color: var(--light-green);
     cursor: pointer;
     border: none;
     transition: all 0.2s ease-in-out;
@@ -169,8 +169,8 @@
 }
 
 .hero-btn-outer:hover {
-    color: #400E63;
-    background-color: #B6F486;
+    color: var(--purple);
+    background-color: var(--light-green);
     font-family: var(--bungee);
     animation: shift-right 0.2s ease-in-out infinite alternate;
     transition: all 0.2s ease-in-out;
@@ -191,7 +191,7 @@
     width: 100%;
     margin: 0 2rem;
     padding: 1rem 0;
-    border: 1px solid #B6F486;
+    border: 1px solid var(--light-green);
     background-color: transparent;
     color: inherit;
     font-family: inherit;
