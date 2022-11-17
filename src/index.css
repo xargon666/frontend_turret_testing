@@ -1,10 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Bungee+Outline&family=Bungee+Shade&family=Outfit:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Inline&family=Bungee+Outline&family=Bungee+Shade&family=Outfit:wght@300;400;500;600;700;800;900&display=swap');;
 
 :root {
+    --bungee: 'Bungee', cursive;
     --bungee-inline: 'Bungee Inline', cursive;
     --bungee-outline: 'Bungee Outline', cursive;
     --bungee-shade: 'Bungee Shade', cursive;
     --outfit: 'Outfit', sans-serif;
+    --light-green: #B6F486;
+    --blue-green: #88D4C3;
+    --blue-purple: #A8AEDD;
+    --light-purple: #8769B6;
+    --purple: #400E63;
+    --almost-black: #170524;
 }
 
 * {

@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../../assets/imgs/logo.png';
+import miniTurret from '../../assets/imgs/miniTurret.svg';
 import './style.css';
 
 const SettingsPage = () => {
@@ -9,46 +10,49 @@ const SettingsPage = () => {
             <img src={logo} alt='logo' />
 
             <form  method='post' className='settings-content'>
-                <div className='settings-cols'>
-                    <h2>Languages</h2>                    
-                    <label className='select-box'>
-                        <div className='select-box-inner'>
-                            <input type='radio' name='language'/>
-                                <span>Javascript</span>
-                        </div>
-                    </label>
-                    <label className='select-box'>
-                        <div className='select-box-inner'>
-                            <input type='radio' name='language' />
-                                <span>Python</span>
-                        </div>
-                    </label>
-                </div>
-                
-                <div className='settings-cols'>
-                    <h2>Level</h2>
-                    <label className='select-box'>
-                        <div className='select-box-inner'>
-                            <input type='radio' name='level' />
-                                <span>Easy</span>
-                        </div>
-                    </label>
-                    <label className='select-box'>
-                        <div className='select-box-inner'>
-                            <input type='radio' name='level' />
-                                <span>Medium</span>
-                        </div>
-                    </label>
-                    <label className='select-box'>
-                        <div className='select-box-inner'>
-                            <input type='radio' name='level' />
-                                <span>Hard</span>
-                        </div>
-                    </label>
+                <div className='settings-options'>
+                    <div className='settings-cols'>
+                        <h2>Languages</h2>                    
+                        <label className='select-box'>
+                            <div className='select-box-inner'>
+                                <input type='radio' name='language'/>
+                                    <span>Javascript</span>
+                            </div>
+                        </label>
+                        <label className='select-box'>
+                            <div className='select-box-inner'>
+                                <input type='radio' name='language' />
+                                    <span>Python</span>
+                            </div>
+                        </label>
+                    </div>
+                    
+                    <div className='settings-cols'>
+                        <h2>Level</h2>
+                        <label className='select-box'>
+                            <div className='select-box-inner'>
+                                <input type='radio' name='level' />
+                                    <span>Easy</span>
+                            </div>
+                        </label>
+                        <label className='select-box'>
+                            <div className='select-box-inner'>
+                                <input type='radio' name='level' />
+                                    <span>Medium</span>
+                            </div>
+                        </label>
+                        <label className='select-box'>
+                            <div className='select-box-inner'>
+                                <input type='radio' name='level' />
+                                    <span>Hard</span>
+                            </div>
+                        </label>
+                    </div>
                 </div>
 
                 <div className='submit-container'>
-                    <input type='submit' value='Continue' className='submit-btn' />
+                    <p className='submit-btn'>Continue</p>
+                    <input type='image' src={miniTurret} alt='continue button' className='mini-turret-img' />
                 </div>            
             </form>
 

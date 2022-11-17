@@ -1,6 +1,6 @@
 .page-container {
     width: 100vw;
-    background: radial-gradient(74.44% 50% at 50% 50%, #B6F486 0%, #A8AEDD 100%);
+    background: radial-gradient(74.44% 50% at 50% 50%, var(--light-green) 0%, var(--blue-purple) 100%);
 }
 
 /* position and style heading */
@@ -21,7 +21,7 @@
 .homepage-title {
     margin: 0;
     font-size: 92px;
-    color: #400E63;
+    color: var(--purple);
     font-weight: 400;
     font-family: var(--bungee-inline);
     margin-right: 30rem;
@@ -53,6 +53,8 @@
 .turret-img{
     display: flex;
     justify-content: flex-end;
+    margin-left: 3vw;
+    margin-right: -6vw;
 }
 
 .hero-turret-img {
@@ -76,6 +78,21 @@
     }
 }
 
+#bullets{
+    animation: bullets 0.5s ease-in-out 5;
+}
+
+@keyframes bullets{
+    from{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to{
+        opacity: 0;
+        transform: translateX(200px);
+    }
+}
+
 #house{
     animation: updown 0.5s ease-in-out 5;
 }
@@ -89,6 +106,19 @@
     }
 }
 
+#shot-effects{
+    animation: flash 0.5s ease-in-out 5;
+    opacity: 0;
+}
+
+@keyframes flash{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
 /* position and style landing page txt and btns */
 
@@ -101,7 +131,7 @@
 .homepage-content-p {
     width: 60%;
     justify-content: end;
-    margin-left: 0;
+    margin-left: -2vw;
     font-family: Consolas;
     font-style: normal;
     font-weight: 400;
@@ -126,12 +156,12 @@
 .hero-btn-outer {
     width: 290px;
     height: 100px;
-    background: #400E63;
+    background: var(--purple);
     border-radius: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #B6F486;
+    color: var(--light-green);
     cursor: pointer;
     border: none;
     transition: all 0.2s ease-in-out;
@@ -139,10 +169,9 @@
 }
 
 .hero-btn-outer:hover {
-    color: #400E63;
-    background-color: #B6F486;
-    font-family: var(--bungee-inline);
-    font-weight: 400;
+    color: var(--purple);
+    background-color: var(--light-green);
+    font-family: var(--bungee);
     animation: shift-right 0.2s ease-in-out infinite alternate;
     transition: all 0.2s ease-in-out;
 }
@@ -162,7 +191,7 @@
     width: 100%;
     margin: 0 2rem;
     padding: 1rem 0;
-    border: 1px solid #B6F486;
+    border: 1px solid var(--light-green);
     background-color: transparent;
     color: inherit;
     font-family: inherit;
@@ -173,7 +202,7 @@
 
 .hero-btn-text {
     text-decoration: none;
-    font-family: var(--bungee-inline);
+    font-family: var(--bungee);
     font-style: normal;
     font-weight: 400;
     font-size: 28px;
