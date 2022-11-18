@@ -1,29 +1,30 @@
 .settings-page-container{
-    /* height: 100vh; */
     display: grid;
     align-items: center;
     justify-items: center; 
-    background: radial-gradient(#B6F486, #A8AEDD);
+    background: radial-gradient(var(--light-green), var(--blue-purple));
     background-repeat: no-repeat;
-    padding: 2vw 5vw;
+    padding: 2vw 5vw 5vw;
 }
 
-.settings-content{
+.settings-options{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 15vw;
     justify-items: center;
-    margin-top: 3vw;
-    /* border: 2px solid black; */
+    margin: 3vw 0 5vw;
 }
+
+
+/* languages and levels */
 
 .settings-cols{
     font-family: var(--bungee-inline);
+    font-weight: 400;
     font-size: 1.5rem;
-    color: #170524;
+    color: var(--purple);
     display: grid;
     justify-items: center;
-    /* border: 2px solid black; */
 }
 
 .settings-cols h2{
@@ -31,19 +32,18 @@
 }
 .settings-cols input[type='radio']{
     display: none;
-
 }
 
 .settings-cols input[type='radio']:checked + span{
-    background-color: #B6F486;
-    color: #8769B6;
+    background-color: var(--light-green);
+    color: var(--light-purple);
     width: 100%;
     display: grid;
     justify-items: center;
 }
 
 .select-box{
-    background-color: #8769B6;
+    background-color: var(--light-purple);
     width: 280px;
     height: 105px;
     margin-bottom: 2vw;
@@ -55,12 +55,41 @@
     display: grid;
     justify-items: center;
     box-sizing: border-box;
-    border: 1px solid #B6F486;
+    border: 1px solid var(--light-green);
     background-color: transparent;
 }
 
 .select-box-inner span{
-    font-family: inherit;
+    font-family: var(--bungee);
     font-size: 1.4rem;
-    color: #B6F486;
+    color: var(--light-green);
+}
+
+
+/* submit button */
+
+.submit-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    gap: 1.5vw;
+}
+
+.submit-btn{
+    align-self: end;
+    justify-self: end;
+    color: var(--purple);
+    font-family: var(--outfit);
+    font-weight: 700;
+    font-size: 2rem;
+    background-color: transparent;
+}
+
+.mini-turret-img{
+    height: 50px;
+    justify-self: start;
+}
+
+.mini-turret-img:hover{
+    
 }

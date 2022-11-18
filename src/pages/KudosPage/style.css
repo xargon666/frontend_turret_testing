@@ -8,7 +8,7 @@
 }
 
 
-/* styling congrats nessage and animation */
+/* styling congrats message and animation */
 
 .congrats-msg-content{
     display: grid;
@@ -23,6 +23,7 @@
 
 .congrats-msg{
     font-family: var(--bungee-inline); 
+    font-weight: 400;
     font-size: 4.5rem;
     color: #400E63;
 }
@@ -45,7 +46,6 @@
     justify-items: center;
     align-items: center;
     padding: 4vw;
-    box-sizing: border-box;
     border: 1.7px solid #B6F486;
     background-color: transparent;
 }
@@ -66,13 +66,13 @@
     font-family: var(--outfit);
     font-size: 1.8rem;
     font-weight: 600;
-    padding: 1vw;
+    padding: 20px;
     color: #A8AEDD;
     cursor: pointer;
-    transition: 0.8s font-size ease-in-out
+    transition: transform .5s ease-in-out;
 }
 
 .h3-title:hover{
     color: #B6F486;
-    font-size: 2rem;
+    transform: scale(1.1);
 }

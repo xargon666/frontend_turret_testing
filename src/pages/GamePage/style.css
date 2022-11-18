@@ -1,5 +1,6 @@
-body {
-    background: radial-gradient(#88D4C3, #A8AEDD);
+
+body{
+    background: radial-gradient(var(--blue-green), var(--blue-purple));
     background-repeat: no-repeat;
 
     /* added here but this is probably not the best place for it */
@@ -25,14 +26,14 @@ body {
     font-family: var(--outfit);
     font-size: 2rem;
     font-weight: 700;
-    color: #170524;
+    color: var(--almost-black);
 }
 
 .test-instructions {
     font-family: var(--outfit);
     font-size: 1.1rem;
     font-weight: 400;
-    color: #170524;
+    color: var(--almost-black);
 }
 
 .text-editor {
@@ -44,7 +45,8 @@ body {
     color: #B6F486;
     padding: 8px 12px;
     border-radius: 15px;
-    font-family: var(--bungee-inline);
+    font-family: var(--bungee-inline);  
+    font-weight: 400;
     justify-self: end;
     cursor: pointer;
     border: 2px solid transparent;
@@ -89,6 +91,7 @@ body {
     color: #400E63;
     background-color: #B6F486;
     font-family: var(--bungee-inline);
+    font-weight: 400;
     animation: shift-right 0.2s ease-in-out infinite alternate;
     transition: all 0.2s ease-in-out;
 }
@@ -129,6 +132,7 @@ body {
 .next-btn-text {
     text-decoration: none;
     font-family: var(--bungee-inline);
+    font-weight: 400;
     font-style: normal;
     font-size: 18px;
     text-align: center;
