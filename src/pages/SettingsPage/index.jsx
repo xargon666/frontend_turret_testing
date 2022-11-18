@@ -2,13 +2,24 @@ import React from 'react';
 import logo from '../../assets/imgs/logo.png';
 import miniTurret from '../../assets/imgs/miniTurret.svg';
 import './style.css';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { getQuestions } from '../../Controllers/questionController';
+import { useSelector } from 'react-redux';
 
 const SettingsPage = () => {
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+    const question = useSelector(state => state.question.data);
+    const startGame = () => {
+        console.log('start game');
+        dispatch(getQuestions());
+        navigate('/game');
+    }
 
     return (
         <section className='settings-page-container'>
             <img src={logo} alt='logo' />
-
             <form  method='post' className='settings-content'>
                 <div className='settings-options'>
                     <div className='settings-cols'>

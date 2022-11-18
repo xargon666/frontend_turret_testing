@@ -4,6 +4,7 @@ import { createSlice } from "@reduxjs/toolkit";
 export const codeSlice = createSlice({
     name: "code",
     initialState: {
+        codeData: [],
         value: `// starting code...`,
         isLoading: false,
         error: null
