@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import logo from '../../assets/imgs/logo.png';
-import turretImg from '../../assets/imgs/turret_img.png';
+import logo from '../../assets/imgs/logo.svg';
+import turretImg from '../../assets/imgs/turret.svg';
 import './style.css';
 
 const KudosPage = () => {

@@ -7,7 +7,7 @@ import { setCode } from "../../Controllers/redux/codeSlice";
 function TextEditor(props) {
   const dispatch = useDispatch();
   // const [content, setContent] = useState("// some code");
-  const question = useSelector((state) => state.question.data);
+  const question = useSelector((state) => state.question.data);  
 
   function handleEditorChange(value, event) {
     dispatch(setCode(value));
@@ -16,7 +16,7 @@ function TextEditor(props) {
   return (
     <>
       <Editor
-        height="35vh"
+        height="100%"
         theme="vs-dark"
         defaultLanguage="javascript"
         // defaultValue={props.code}

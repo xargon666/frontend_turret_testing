@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import { ReactComponent as Turret } from '../../assets/imgs/turret.svg';
 import WordsAnim from '../../components/WordsAnimation';
 import './style.css';
-// import 'animate.css';
 
 
 const Home = () => {
