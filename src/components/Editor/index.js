@@ -16,8 +16,11 @@ function TextEditor(props) {
   return (
     <>
       <Editor
-        height="100%"
+        height={props.height ? props.height : "100%"}
         theme="vs-dark"
+        options={{
+          readOnly: props.readOnly ? props.readOnly : false,
+        }}
         defaultLanguage="javascript"
         // defaultValue={props.code}
         value={props.code}

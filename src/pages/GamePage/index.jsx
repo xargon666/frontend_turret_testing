@@ -14,9 +14,10 @@ const GamePage = () => {
     const dispatch = useDispatch();
 
     // local state declarations
-    const [title, setTitle] = useState("placeholder");
-    const [instructions, setInstructions] = useState("placeholder");
-    const [questionCounter, setQuestionCounter] = useState(0);
+    const [title, setTitle] = useState("placeholder")
+    const [instructions, setInstructions] = useState("placeholder")
+    const [jsFunction, setJsFunction] = useState("placeholder")
+    const [questionCounter, setQuestionCounter] = useState(0)
     const [correctAnswer, setCorrectAnswer] = useState(false);
     const [answerCheckFeedbackMsg, setAnswerCheckFeedbackMsg] = useState("");
 
@@ -68,6 +69,7 @@ const GamePage = () => {
             dispatch(getQuestions()).then((res) => {
                 setTitle(res.payload[questionCounter].title)
                 setInstructions(res.payload[questionCounter].description)
+                setJsFunction(res.payload[questionCounter].function)
                 dispatch(setCode(res.payload[questionCounter].jest_function_incomplete))
             });
         } catch (error) {
@@ -81,12 +83,13 @@ const GamePage = () => {
             <section className='game-container'>
 
                 <div className='left-col'>
-                    <h1 className='test-title'>{title}</h1>
-                    <p className='test-instructions'>{instructions}</p>
+                  <h1 className='test-title'>{title}</h1>
+                  <p className='test-instructions'>{instructions}</p>
+                  <TextEditor readOnly={true} height={'10vh'} code={jsFunction} />
 
-                    <div className='test-help'>
-                        <Collapsible />
-                    </div>
+                  <div className='test-help'>
+                      <Collapsible />
+                  </div>
                 </div>
 
                 <div className='right-col'>
