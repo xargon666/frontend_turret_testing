@@ -20,6 +20,9 @@
     box-sizing: border-box;
 }
     
+.logo {
+    height: 70px;
+}
 
 .user-select{
     /* remove the abilit to highlight the text on screen */
@@ -27,3 +30,4 @@
     -moz-user-select: none;
     -webkit-user-select: none;
 }
+

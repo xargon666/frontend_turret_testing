@@ -25,10 +25,10 @@ const Home = () => {
                 </div>
                 <div className="page-hero-content">
                     <div className="turret-img">
-                        <Turret className='hero-turret-img' alt="cartoon turret" />
+                        <Turret className='hero-turret-img user-select' alt="cartoon turret" />
                     </div>
                     <div className='homepage-content-p user-select'>
-                        <WordsAnim/>
+                        <WordsAnim phrase={["expect", "('testing')", ".", "toBe", "('fun');"]} />
                     </div>
                 </div>
                 <div className="page-hero-buttons">

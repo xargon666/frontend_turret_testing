@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import './style.css';
 
-export default function WordsAnim() {
+export default function WordsAnim(props) {
     const [phrase, setPhrase] = useState([]);  
         
     let i = 0; 
     let arr = [];
-        
+
     function handleMessage() {
-        let message = ["expect", "('testing')", ".", "toBe", "('fun');"];
-        
+        let message = props.phrase;
+
         setTimeout(() => {
           arr.push(message[i]);
           setPhrase(arr.toString().split(","));
