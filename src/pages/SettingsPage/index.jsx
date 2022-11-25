@@ -20,42 +20,42 @@ const SettingsPage = () => {
     return (
         <section className='settings-page-container'>
             <img src={logo} alt='logo' />
-            <form  method='post' className='settings-content'>
+            <form onSubmit={() => navigate('/game')} className='settings-content'>
                 <div className='settings-options'>
                     <div className='settings-cols'>
-                        <h2>Languages</h2>                    
+                        <h2>Languages</h2>
                         <label className='select-box'>
                             <div className='select-box-inner'>
-                                <input type='radio' name='language'/>
-                                    <span>Javascript</span>
+                                <input type='radio' name='language' />
+                                <span>Javascript</span>
                             </div>
                         </label>
                         <label className='select-box'>
                             <div className='select-box-inner'>
                                 <input type='radio' name='language' />
-                                    <span>Python</span>
+                                <span>Python</span>
                             </div>
                         </label>
                     </div>
-                    
+
                     <div className='settings-cols'>
                         <h2>Level</h2>
                         <label className='select-box'>
                             <div className='select-box-inner'>
                                 <input type='radio' name='level' />
-                                    <span>Easy</span>
+                                <span>Easy</span>
                             </div>
                         </label>
                         <label className='select-box'>
                             <div className='select-box-inner'>
                                 <input type='radio' name='level' />
-                                    <span>Medium</span>
+                                <span>Medium</span>
                             </div>
                         </label>
                         <label className='select-box'>
                             <div className='select-box-inner'>
                                 <input type='radio' name='level' />
-                                    <span>Hard</span>
+                                <span>Hard</span>
                             </div>
                         </label>
                     </div>
@@ -64,7 +64,7 @@ const SettingsPage = () => {
                 <div className='submit-container'>
                     <p className='submit-btn'>Continue</p>
                     <input type='image' src={miniTurret} alt='continue button' className='mini-turret-img' />
-                </div>            
+                </div>
             </form>
 
         </section>
