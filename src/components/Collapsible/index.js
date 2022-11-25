@@ -15,11 +15,12 @@ function Collapsible() {
             <button className='toggle-btn' onClick={toggle}>Need a hint?
             <span className='triangle-down'> </span></button>
             {open && (
-                <>
+                <div className='toggle-content'>
                     <button className='modal-btn' onClick={() => setOpenModal(true)}>Intro to Jest</button>
                     <JestModal open={openModal} onClose={() => setOpenModal(false)} />
-                    <div>HINT</div>
-                </>
+
+                    <div className='hint'> Placeholder for HINT</div>
+                </div>
             )}
         </div>
     )

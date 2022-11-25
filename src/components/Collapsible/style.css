@@ -1,8 +1,9 @@
+/* position and styling for toggle button */
+
 .toggle-container {
-    display: grid;
-    
-    /* background: white; */
-    /* padding: 1vw; */
+    display: grid;    
+    background: white;
+    border-radius: 12px;
 }
 
 .toggle-btn {
@@ -12,14 +13,13 @@
     justify-items: start;
     background: white;
     font-family: var(--outfit);
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 600;
-    color: var(--light-purple);
-    /* border: none; */
+    color: var(--blue-green);
+    border: none;
+    border-bottom: 1px solid  var(--blue-green);
     border-radius: 12px;
     padding: 1vw 1.5vw;
-    
-
 }
 
 .triangle-down {
@@ -29,7 +29,32 @@
 	height: 0;
 	border-left: 15px solid transparent;
 	border-right: 15px solid transparent;
-	border-top: 20px solid var(--light-purple);
-    /* border: 3px solid black; */
-
+	border-top: 20px solid var(--blue-green);
 }
+
+
+/* position and styling for toggle content */
+
+.toggle-content {
+    padding: 2vw 1.5vw;
+}
+
+.modal-btn, .hint {
+    background-color: transparent;
+    color: var(--light-purple);
+    font-family: var(--outfit);
+    font-weight: 600;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+}
+
+.modal-btn {
+    margin-bottom: 2vw;
+}
+
+.modal-btn:hover {
+    text-decoration: underline;
+}
+
+

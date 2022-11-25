@@ -39,24 +39,6 @@
     color: var(--almost-black);
 }
 
-.modal-btn{
-    background-color: transparent;
-    color: var(--light-purple);
-    font-family: var(--outfit);
-    font-weight: 600;
-    font-size: 1.3rem;
-    border: none;
-    cursor: pointer;
-}
-
-.modal-btn:hover{
-    text-decoration: underline;
-}
-
-.test-help {
-    margin: 3vw 0 1.5vw;
-}
-
 
 /* position and styles for right column */
 
