@@ -105,7 +105,9 @@ const GamePage = () => {
                     </div> */}
                     <div className='terminal-row'>
                         <div className='run-btn-container'>
-                            <RunBtn alt='run button' onClick={checkCorrectAnswer} className='run-btn' />
+                            <button className='run-btn'>
+                            <RunBtn alt='run button' onClick={checkCorrectAnswer}  />
+                            </button>
                         </div>
                         <div className='terminal-window'>
                             <div className='terminal'>
