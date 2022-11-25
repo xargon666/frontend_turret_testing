@@ -1,7 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import WordsAnim from '../../components/WordsAnimation';
+import { ReactComponent as Turret } from '../../assets/imgs/turret.svg';
 import logo from '../../assets/imgs/logo.svg';
-import turretImg from '../../assets/imgs/turret.svg';
 import './style.css';
 
 const KudosPage = () => {
@@ -10,12 +11,17 @@ const KudosPage = () => {
     return (
         
         <section className='kudos-page-container'>
-            <img src={logo} alt='logo' />
-            <div className='congrats-msg-content'>
-                <div className='turret-img-kudos'>
+            <img src={logo} className='logo user-select' alt='logo' />
+            <div className='congrats-msg-content user-select'>
+                {/* <div className='turret-img-kudos'>
                     <img className='hero-turret-img' src={turretImg} alt='cartoon turret' />
+                </div> */}
+                <div className="turret-img">
+                    <Turret className='hero-turret-img' alt="cartoon turret" />
+                    <div className='congrats-msg'>
+                        <WordsAnim phrase={["Great ", "Work", "!", "!", "!"]} />
+                    </div>
                 </div>
-                <h1 className='congrats-msg'>Great Work !!!</h1>
             </div>
 
             <div className='whats-next-content'>

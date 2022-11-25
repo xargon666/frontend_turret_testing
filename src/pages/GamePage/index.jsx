@@ -79,13 +79,12 @@ const GamePage = () => {
 
     return (
         <div className='game-page'>
-            <img src={logo} alt='logo' />
+            <img src={logo} className='logo user-select' alt='logo' />
             <section className='game-container'>
 
                 <div className='left-col'>
                   <h1 className='test-title'>{title}</h1>
                   <p className='test-instructions'>{instructions}</p>
-                  <TextEditor readOnly={true} height={'10vh'} code={jsFunction} />
 
                   <div className='test-help'>
                       <Collapsible />
@@ -94,7 +93,7 @@ const GamePage = () => {
 
                 <div className='right-col'>
                     <div className='text-editor1'>
-                        <TextEditor code={code} />
+                        <TextEditor readOnly={true} code={jsFunction} />
                     </div>
                     <div className='text-editor2'>
                         <TextEditor code={code} />
@@ -106,7 +105,9 @@ const GamePage = () => {
                     </div> */}
                     <div className='terminal-row'>
                         <div className='run-btn-container'>
-                            <RunBtn alt='run button' onClick={checkCorrectAnswer} className='run-btn' />
+                            <button className='run-btn'>
+                            <RunBtn alt='run button' onClick={checkCorrectAnswer}  />
+                            </button>
                         </div>
                         <div className='terminal-window'>
                             <div className='terminal'>

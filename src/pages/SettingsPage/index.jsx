@@ -19,7 +19,7 @@ const SettingsPage = () => {
 
     return (
         <section className='settings-page-container'>
-            <img src={logo} alt='logo' />
+            <img src={logo} className='logo user-select' alt='logo' />
             <form onSubmit={() => navigate('/game')} className='settings-content'>
                 <div className='settings-options'>
                     <div className='settings-cols'>
