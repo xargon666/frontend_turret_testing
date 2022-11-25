@@ -40,6 +40,7 @@
     width: 100%;
     display: grid;
     justify-items: center;
+    border-radius: 4px;
 }
 
 .select-box{
@@ -54,6 +55,8 @@
 .select-box-inner{
     display: grid;
     justify-items: center;
+    align-items: center;
+    border-radius: 7px;
     box-sizing: border-box;
     border: 1px solid var(--light-green);
     background-color: transparent;
@@ -91,5 +94,29 @@
 }
 
 .mini-turret-img:hover{
-    
+    animation: bounce 0.5s alternate-reverse cubic-bezier(
+        .5, 0.05, 1, .5) infinite;
 }
+
+@keyframes bounce {
+    from {
+        transform: translate3d(0, 0, 0);
+    } 
+    /* 40% {transform: translateY(-30px);}  */
+    to{
+        transform: translate3d(0, 20px, 0);
+    } 
+} 
+
+/* #mini-house:hover{
+    animation: updown 0.5s ease infinite;
+}
+
+@keyframes updown{
+    from{
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(15px);
+    }
+} */

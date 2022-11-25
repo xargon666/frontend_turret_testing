@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../assets/imgs/logo.png';
+import logo from '../../assets/imgs/logo.svg';
 import miniTurret from '../../assets/imgs/miniTurret.svg';
 import './style.css';
 import { useNavigate } from 'react-router-dom';

@@ -21,3 +21,9 @@
 }
     
 
+.user-select{
+    /* remove the abilit to highlight the text on screen */
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}

@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import TextEditor from '../../components/Editor';
-import Terminal from '../../components/Terminal';
-import logo from '../../assets/imgs/logo.png';
-import './style.css';
 import { useDispatch, useSelector } from 'react-redux';
+import { Collapsible, Terminal, TextEditor } from '../../components';
 import { setCode } from '../../Controllers/redux/codeSlice';
 import { getQuestions } from '../../Controllers/questionController';
+import { ReactComponent as RunBtn } from '../../assets/imgs/runBtn.svg';
+import logo from '../../assets/imgs/logo.svg';
+import './style.css';
 
 const GamePage = () => {
     // react-router-dom hook to navigate to other pages and dispatch to redux store
@@ -19,7 +19,7 @@ const GamePage = () => {
     const [jsFunction, setJsFunction] = useState("placeholder")
     const [questionCounter, setQuestionCounter] = useState(0)
     const [correctAnswer, setCorrectAnswer] = useState(false);
-    const [answerCheckFeedbackMsg, setAnswerCheckFeedbackMsg] = useState("")
+    const [answerCheckFeedbackMsg, setAnswerCheckFeedbackMsg] = useState("");
 
     // redux state calls to get code and questions
     const { question } = useSelector(state => state);
@@ -78,44 +78,53 @@ const GamePage = () => {
     }, [dispatch, questionCounter]);
 
     return (
-        <div id='content'>
-            <div className='editor-side'>
-                <img src={logo} alt='logo' />
+        <div className='game-page'>
+            <img src={logo} alt='logo' />
+            <section className='game-container'>
 
-                <h1 className='test-title'>{title}</h1>
-                <p className='test-instructions'>{instructions}</p>
-                <TextEditor readOnly={true} height={'10vh'} code={jsFunction} />
+                <div className='left-col'>
+                  <h1 className='test-title'>{title}</h1>
+                  <p className='test-instructions'>{instructions}</p>
+                  <TextEditor readOnly={true} height={'10vh'} code={jsFunction} />
 
-                <div className='text-editor'>
-                    <TextEditor code={code} />
+                  <div className='test-help'>
+                      <Collapsible />
+                  </div>
                 </div>
-                <button
-                    className='check-btn-outer'
-                    onClick={checkCorrectAnswer}
-                >
-                    <div className='check-btn-inner'>
-                        <span className='next-btn-text'>Check</span>
-                    </div>
-                </button>
-                <button
-                    className={correctAnswer ? 'next-btn-outer' : 'next-btn-disabled-outer'}
-                    onClick={nextQuestion}
-                >
-                    <div className={correctAnswer ? 'next-btn-inner' : 'next-btn-disabled- inner'}>
-                        <span className='next-btn-text'>Next</span>
-                    </div>
-                </button>
 
-            </div>
-            <div className='terminal-side'>
-                {/* <div className="question-function">
-                    <h1 className='test-title'>Question Function</h1>
-                    <TextEditor code={question[questionCounter].jest_function_incomplete} />
-                </div> */}
-                <div className='terminal-window'>
-                    <Terminal correctAnswer={correctAnswer} answerCheckFeedbackMsg={answerCheckFeedbackMsg} />
+                <div className='right-col'>
+                    <div className='text-editor1'>
+                        <TextEditor code={code} />
+                    </div>
+                    <div className='text-editor2'>
+                        <TextEditor code={code} />
+                    </div>
+                   
+                    {/* <div className="question-function">
+                        <h1 className='test-title'>Question Function</h1>
+                        <TextEditor code={question[questionCounter].jest_function_incomplete} />
+                    </div> */}
+                    <div className='terminal-row'>
+                        <div className='run-btn-container'>
+                            <RunBtn alt='run button' onClick={checkCorrectAnswer} className='run-btn' />
+                        </div>
+                        <div className='terminal-window'>
+                            <div className='terminal'>
+                                <Terminal correctAnswer={correctAnswer} answerCheckFeedbackMsg={answerCheckFeedbackMsg} />
+                            </div>
+                        </div>
+                        <div className='next-btn'>
+                            <button className={correctAnswer ? 'next-btn-outer' : 'next-btn-disabled-outer'}
+                        onClick={nextQuestion}
+                            >
+                                <div className={correctAnswer ? 'next-btn-inner' : 'next-btn-disabled-inner'}>
+                                    <span className='next-btn-text user-select'>Next</span>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </section>
         </div>
     )
 

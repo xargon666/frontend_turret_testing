@@ -1,10 +1,12 @@
 .console {
     display: grid;
     justify-content: center;
+    grid-template-rows: 0.3fr 1fr;
+    font-family: var(--outfit);
     position: relative;
     height: 100%;
     padding: 2rem 0;
-    grid-template-rows: 0.3fr 1fr;
+
 }
 
 .console h1 {
