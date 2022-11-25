@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { JestModal,Terminal, TextEditor } from '../../components';
+import { Collapsible, Terminal, TextEditor } from '../../components';
 import { setCode } from '../../Controllers/redux/codeSlice';
 import { getQuestions } from '../../Controllers/questionController';
 import { ReactComponent as RunBtn } from '../../assets/imgs/runBtn.svg';
@@ -19,7 +19,6 @@ const GamePage = () => {
     const [questionCounter, setQuestionCounter] = useState(0);
     const [correctAnswer, setCorrectAnswer] = useState(false);
     const [answerCheckFeedbackMsg, setAnswerCheckFeedbackMsg] = useState("");
-    const [openModal, setOpenModal] = useState(false);
 
     // redux state calls to get code and questions
     const { question } = useSelector(state => state);
@@ -86,8 +85,7 @@ const GamePage = () => {
                     <p className='test-instructions'>{instructions}</p>
 
                     <div className='test-help'>
-                        <button className='modal-btn' onClick={() => setOpenModal(true)}>Intro to Jest</button>
-                        <JestModal open={openModal} onClose={() => setOpenModal(false)} />
+                        <Collapsible />
                     </div>
                 </div>
 
