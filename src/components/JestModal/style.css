@@ -1,8 +1,14 @@
 .overlay{
-    background-color: rgba(var(--light-purple), 0.3);
-    /* position: fixed; */
-    width: 100%;
-    height: 100%;
+    background: rgba(135, 105, 182, 0.5);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: grid;
+    justify-items: center;
+    align-items: center;
 }
 
 .modal-container{
