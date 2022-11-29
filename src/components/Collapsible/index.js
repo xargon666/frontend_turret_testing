@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import JestModal from '../JestModal';
 import './style.css';
 
-function Collapsible() {
+function Collapsible(props) {
     const [open, setOpen] = useState(false);
     const [openModal, setOpenModal] = useState(false);
 
@@ -13,13 +13,13 @@ function Collapsible() {
     return (
         <div className='toggle-container'>
             <button className='toggle-btn' onClick={toggle}>Need a hint?
-            <span className='triangle-down'> </span></button>
+                <span className='triangle-down'> </span></button>
             {open && (
                 <div className='toggle-content'>
                     <button className='modal-btn' onClick={() => setOpenModal(true)}>Intro to Jest</button>
                     <JestModal open={openModal} onClose={() => setOpenModal(false)} />
 
-                    <div className='hint'> Placeholder for HINT</div>
+                    <div className='hint'>{props.hint}</div>
                 </div>
             )}
         </div>

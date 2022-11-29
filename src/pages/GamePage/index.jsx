@@ -17,6 +17,8 @@ const GamePage = () => {
     const [title, setTitle] = useState("placeholder")
     const [instructions, setInstructions] = useState("placeholder")
     const [jsFunction, setJsFunction] = useState("placeholder")
+    const [hint, setHint] = useState("");
+    const [codeQuestion, setCodeQuestion] = useState("placeholder")
     const [questionCounter, setQuestionCounter] = useState(0)
     const [correctAnswer, setCorrectAnswer] = useState(false);
     const [answerCheckFeedbackMsg, setAnswerCheckFeedbackMsg] = useState("");
@@ -29,32 +31,34 @@ const GamePage = () => {
     const checkCorrectAnswer = () => {
         console.log('checking answer');
         console.log(JSON.stringify(code.replace(/(\r\n|\n|\r|\s|\n\s*\n)/gm, '')));
-        console.log(JSON.stringify(question.data[questionCounter].jest_function_complete.replace(/(\r\n|\n|\r|\s|\n\s*\n)/gm, '')));
+        console.log(JSON.stringify(question.data[questionCounter].code_answer.replace(/(\r\n|\n|\r|\s|\n\s*\n)/gm, '')));
         if (
             code.replace(/(\r\n|\n|\r|\s|\n\s*\n)/gm, '')
             ===
-            question.data[questionCounter].jest_function_complete.replace(/(\r\n|\n|\r|\s|\n\s*\n)/gm, '')
+            question.data[questionCounter].code_answer.replace(/(\r\n|\n|\r|\s|\n\s*\n)/gm, '')
         ) {
             console.log('correct answer');
             setCorrectAnswer(true);
-            setAnswerCheckFeedbackMsg("Correct Answer!")
+            setAnswerCheckFeedbackMsg(question.data[questionCounter].success_message);
         } else if (
             code.replace(/\n\s/g, '')
             !==
-            question.data[questionCounter].jest_function_complete.replace(/\n\s/g, '')
+            question.data[questionCounter].code_answer.replace(/\n\s/g, '')
         ) {
             console.log('incorrect answer');
             setCorrectAnswer(false);
-            setAnswerCheckFeedbackMsg("Incorrect answer, try again!")
+            setAnswerCheckFeedbackMsg(question.data[questionCounter].failed_message)
         }
     }
 
     // progress to the next question, if there are no more questions, navigate to the end page. 
     const nextQuestion = () => {
         if (questionCounter < question.data.length - 1 && correctAnswer) {
-            console.log(question.data[questionCounter].jest_function_incomplete);
             setQuestionCounter(questionCounter + 1);
-            dispatch(setCode(question.data[questionCounter].jest_function_incomplete));
+            setValues(question.data);
+            // setJsFunction(question.data[questionCounter].function)
+            // dispatch(setCode(question.data[questionCounter].code_question));
+            console.log(code);
             setCorrectAnswer(false);
             setAnswerCheckFeedbackMsg("");
         }
@@ -63,19 +67,28 @@ const GamePage = () => {
             navigate('/kudos');
         }
     }
+    function setValues(data) {
+        new Promise((resolve, reject) => {
+            setTitle(data[questionCounter].title);
+            setInstructions(data[questionCounter].description);
+            setJsFunction(data[questionCounter].function);
+            setHint(data[questionCounter].hint);
+            setCodeQuestion(data[questionCounter].code_question);
+            dispatch(setCode(data[questionCounter].code_question));
+            resolve();
+        })
+    }
 
     useEffect(() => {
         try {
             dispatch(getQuestions()).then((res) => {
-                setTitle(res.payload[questionCounter].title)
-                setInstructions(res.payload[questionCounter].description)
-                setJsFunction(res.payload[questionCounter].function)
-                dispatch(setCode(res.payload[questionCounter].jest_function_incomplete))
+                setValues(res.payload);
             });
         } catch (error) {
             console.log(error);
         }
     }, [dispatch, questionCounter]);
+
 
     return (
         <div className='game-page'>
@@ -83,30 +96,31 @@ const GamePage = () => {
             <section className='game-container'>
 
                 <div className='left-col'>
-                  <h1 className='test-title'>{title}</h1>
-                  <p className='test-instructions'>{instructions}</p>
+                    <h1 className='test-title'>{title}</h1>
+                    <p className='test-instructions'>{instructions}</p>
 
-                  <div className='test-help'>
-                      <Collapsible />
-                  </div>
+                    <div className='test-help'>
+                        <Collapsible counter={questionCounter} hint={hint} question={question} />
+                    </div>
                 </div>
 
                 <div className='right-col'>
                     <div className='text-editor1'>
-                        <TextEditor readOnly={true} code={jsFunction} />
+                        <TextEditor readOnly={true} function={jsFunction} />
                     </div>
                     <div className='text-editor2'>
-                        <TextEditor code={code} />
+                        <TextEditor code={codeQuestion} />
                     </div>
-                   
+
+
                     {/* <div className="question-function">
                         <h1 className='test-title'>Question Function</h1>
-                        <TextEditor code={question[questionCounter].jest_function_incomplete} />
+                        <TextEditor code={question[questionCounter].code_question} />
                     </div> */}
                     <div className='terminal-row'>
                         <div className='run-btn-container'>
                             <button className='run-btn'>
-                            <RunBtn alt='run button' onClick={checkCorrectAnswer}  />
+                                <RunBtn alt='run button' onClick={checkCorrectAnswer} />
                             </button>
                         </div>
                         <div className='terminal-window'>
@@ -116,7 +130,7 @@ const GamePage = () => {
                         </div>
                         <div className='next-btn'>
                             <button className={correctAnswer ? 'next-btn-outer' : 'next-btn-disabled-outer'}
-                        onClick={nextQuestion}
+                                onClick={nextQuestion}
                             >
                                 <div className={correctAnswer ? 'next-btn-inner' : 'next-btn-disabled-inner'}>
                                     <span className='next-btn-text user-select'>Next</span>
