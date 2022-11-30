@@ -193,7 +193,7 @@
 }
 
 .run-btn:active #run-barrel {
-    animation: run-shoot 1s ease-in-out 1;
+    animation: run-shoot 0.1s ease-in-out 1;
 }
 
 @keyframes run-shoot {
@@ -201,12 +201,12 @@
         transform: translateX(0);
     }
     to {
-        transform: translateX(-10px);
+        transform: translateX(-12px);
     }
 }
 
 .run-btn:active #run-bullet {
-    animation: run-bullet 0.1s ease-in-out 1;
+    animation: run-bullet 0.3s ease-in-out 1;
 }
 
 @keyframes run-bullet {
@@ -229,13 +229,16 @@
         transform: translateY(0);
     }
     to {
-        transform: translateY(8px);
+        transform: translateY(10px);
     }
 }
 
-.run-btn:active #run-shot-effects {
+#run-shot-effects{
     opacity: 0;
-    animation: run-flash 0.1s ease-in-out 1;
+}
+
+.run-btn:active #run-shot-effects {
+    animation: run-flash 0.3s ease-in-out 1;
 }
 
 @keyframes run-flash {
