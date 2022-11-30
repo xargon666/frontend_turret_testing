@@ -8,7 +8,7 @@ import { ReactComponent as RunBtn } from '../../assets/imgs/runBtn.svg';
 import logo from '../../assets/imgs/logo.svg';
 import './style.css';
 
-const GamePage = () => {
+const GamePage = (props) => {
     // react-router-dom hook to navigate to other pages and dispatch to redux store
     const navigate = useNavigate();
     const dispatch = useDispatch();
@@ -29,9 +29,6 @@ const GamePage = () => {
 
     // Check to see if the answer the user provided is the correct answer
     const checkCorrectAnswer = () => {
-        console.log('checking answer');
-        console.log(JSON.stringify(code.replace(/(\r\n|\n|\r|\s|\n\s*\n)/gm, '')));
-        console.log(JSON.stringify(question.data[questionCounter].code_answer.replace(/(\r\n|\n|\r|\s|\n\s*\n)/gm, '')));
         if (
             code.replace(/(\r\n|\n|\r|\s|\n\s*\n)/gm, '')
             ===
@@ -56,14 +53,11 @@ const GamePage = () => {
         if (questionCounter < question.data.length - 1 && correctAnswer) {
             setQuestionCounter(questionCounter + 1);
             setValues(question.data);
-            // setJsFunction(question.data[questionCounter].function)
-            // dispatch(setCode(question.data[questionCounter].code_question));
-            console.log(code);
             setCorrectAnswer(false);
             setAnswerCheckFeedbackMsg("");
         }
 
-        if (questionCounter === question.data.length - 1 && correctAnswer) {
+        if (questionCounter === question.data.length - 1) {
             navigate('/kudos');
         }
     }
@@ -80,8 +74,18 @@ const GamePage = () => {
     }
 
     useEffect(() => {
+        console.log(question.data.length);
+        if (question.data.length === 0) {
+            navigate('/kudos');
+        }
         try {
-            dispatch(getQuestions()).then((res) => {
+            console.log('getting questions');
+            let queryParams = {
+                language: props.lang,
+                difficulty: props.difficulty
+            }
+            dispatch(getQuestions(queryParams)).then((res) => {
+                console.log('questions received');
                 setValues(res.payload);
             });
         } catch (error) {
