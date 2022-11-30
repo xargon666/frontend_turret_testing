@@ -15,9 +15,7 @@
 /* position and styles for left column */
 
 .left-col {
-    display: grid;
     grid-column: 1/2;
-    position: relative;
     background-color: rgba(255, 255, 255, .5);
     border-bottom-left-radius: 18px;
     border-top-left-radius: 18px;
@@ -25,7 +23,7 @@
 }
 
 .test-title {
-    margin: 1.5vw 0;
+    margin: 1.5vw 0 3vw;
     font-family: var(--outfit);
     font-size: 2rem;
     font-weight: 700;
@@ -37,6 +35,7 @@
     font-size: 1.1rem;
     font-weight: 400;
     color: var(--almost-black);
+    margin-bottom: 7vw;
 }
 
 
@@ -68,54 +67,6 @@
     grid-auto-rows: auto;
 }
 
-.run-btn-container {
-    grid-column: 1/2;
-}
-
-/* .check-btn-outer {
-    position: relative;
-    background: var(--purple);
-    color: var(--light-green);
-    padding: 8px 12px;
-    border-radius: 15px;
-    font-family: var(--bungee);
-    font-weight: 400;
-    justify-self: end;
-    cursor: pointer;
-    border: 2px solid transparent;
-    margin: 15px 0;
-}
-
-.check-btn-outer:hover {
-    color: #400E63;
-    background-color: #B6F486;
-    font-family: var(--bungee-inline);
-    font-weight: 400;
-    animation: shift-right 0.2s ease-in-out infinite alternate;
-    transition: all 0.2s ease-in-out;
-}
-
-@keyframes shift-right {
-    from {
-        transform: translateX(0);
-    }
-
-    to {
-        transform: translateX(10px);
-    }
-}
-
-.check-btn-inner {
-    padding: 0 1rem;
-    box-sizing: border-box;
-    border: 1px solid var(--light-green);
-    background-color: transparent;
-    color: inherit;
-    font-family: inherit;
-    justify-content: center;
-    align-items: center;
-} */
-
 .terminal-window {
     display: grid;    
     grid-column: 2/3;
@@ -128,61 +79,8 @@
     border-radius: 15px;
 }
 
-.next-btn {
-    display: grid;
-    grid-column: 2/3;
-    justify-items: end;
-    margin-top: 1vw;
-}
-
-.next-btn-outer, .next-btn-disabled-outer {
-    background: var(--purple);
-    color: var(--light-green);
-    padding: 6px 12px;
-    border-radius: 12px;
-    font-family: var(--bungee);  
-    font-weight: 400;
-    border: 2px solid transparent;
-}
-
-.next-btn-outer {
-    cursor: pointer;
-}
-
-.next-btn-disabled-outer {
-    justify-self: end;
-    cursor: default;
-    opacity: 0.2;
-}
-
-.next-btn-outer:hover {
-    color: var(--purple);
-    background-color: var(--light-green);
-    font-family: var(--bungee);
-    animation: shift-right 0.2s ease-in-out infinite alternate;
-    transition: all 0.2s ease-in-out;
-}
-
-.next-btn-inner {
-    padding: 0 1rem;
-    box-sizing: border-box;
-    border-radius: 8px;
-    border: 1px solid var(--light-green);
-    background-color: transparent;
-    color: inherit;
-    font-family: inherit;
-    justify-content: center;
-    align-items: center;
-}
-
-.next-btn-text {
-    text-decoration: none;
-    font-family: var(--bungee);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1rem;
-    text-align: center;
-    color: inherit;
+.run-btn-container {
+    grid-column: 1/2;
 }
 
 .run-btn {
@@ -248,4 +146,71 @@
     100% {
         opacity: 1;
     }
+}
+
+.next-btn {
+    display: grid;
+    grid-column: 2/3;
+    justify-items: end;
+    margin-top: 1vw;
+}
+
+.next-btn-outer, .next-btn-disabled-outer {
+    background: var(--purple);
+    color: var(--light-green);
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-family: var(--bungee);  
+    font-weight: 400;
+    border: 2px solid transparent;
+}
+
+.next-btn-outer {
+    cursor: pointer;
+}
+
+.next-btn-disabled-outer {
+    justify-self: end;
+    cursor: default;
+    opacity: 0.2;
+}
+
+.next-btn-outer:hover {
+    color: var(--purple);
+    background-color: var(--light-green);
+    font-family: var(--bungee);
+    animation: shift-right 0.2s ease-in-out infinite alternate;
+    transition: all 0.2s ease-in-out;
+}
+
+@keyframes shift-right {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(10px);
+    }
+}
+
+.next-btn-inner {
+    padding: 0 1rem;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: 1px solid var(--light-green);
+    background-color: transparent;
+    color: inherit;
+    font-family: inherit;
+    justify-content: center;
+    align-items: center;
+}
+
+.next-btn-text {
+    text-decoration: none;
+    font-family: var(--bungee);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    text-align: center;
+    color: inherit;
 }
