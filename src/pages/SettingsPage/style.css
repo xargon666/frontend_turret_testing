@@ -4,15 +4,16 @@
     justify-items: center;
     background: radial-gradient(var(--light-green), var(--blue-purple));
     background-repeat: no-repeat;
-    padding: 2vw 5vw 5vw;
+    height: 100vh;
+    padding: 2vw 5vw 3vw;
 }
 
 .settings-options {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 15vw;
     justify-items: center;
-    margin: 3vw 0 5vw;
+    grid-gap: 15vw;
+    margin: 3vw 0;
 }
 
 
@@ -28,7 +29,7 @@
 }
 
 .settings-cols h2 {
-    margin-bottom: 3vw;
+    margin-bottom: 1.5vw;
 }
 
 .settings-cols input[type='radio'] {
@@ -41,16 +42,17 @@
     width: 100%;
     display: grid;
     justify-items: center;
+    align-items: center;
     border-radius: 4px;
 }
 
 .select-box {
     background-color: var(--light-purple);
-    width: 280px;
-    height: 105px;
-    margin-bottom: 2vw;
-    padding: 1.5vw;
-    border-radius: 20px;
+    width: 260px;
+    height: 90px;
+    margin-bottom: 1.5vw;
+    padding: 1.3vw;
+    border-radius: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,8 +60,8 @@
 
 .select-box-inner {
     width: 100%;
-    display: grid;
-    justify-items: center;
+    display: flex;
+    justify-content: center;
     align-items: center;
     border-radius: 7px;
     box-sizing: border-box;
@@ -69,9 +71,8 @@
 
 .select-box-inner span {
     font-family: var(--bungee);
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     color: var(--light-green);
-    padding: 0.5rem 0;
 }
 
 
