@@ -74,10 +74,6 @@ const GamePage = (props) => {
     }
 
     useEffect(() => {
-        console.log(question.data.length);
-        if (question.data.length === 0) {
-            navigate('/kudos');
-        }
         try {
             console.log('getting questions');
             let queryParams = {
