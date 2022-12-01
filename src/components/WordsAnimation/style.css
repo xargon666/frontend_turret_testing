@@ -1,0 +1,9 @@
+@font-face {
+    font-family: Consolas;
+    src: url(../../assets/Consolas-Font/Consolas.ttf);
+}
+
+.word-anim-content {
+    font-family: Consolas;
+    font-style: normal;
+}

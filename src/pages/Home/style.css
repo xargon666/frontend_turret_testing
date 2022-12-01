@@ -42,7 +42,7 @@
 
 /* turret animation */
 
-.turret-img{
+.turret-img {
     display: flex;
     justify-content: flex-end;
     margin-left: 3vw;
@@ -53,56 +53,60 @@
     height: 30vh;
 }
 
-#barrel{
-    animation: shoot 0.5s ease-in-out 5 ;
+#barrel {
+    animation: shoot 0.5s ease-in-out 5;
 }
 
-@keyframes shoot{
-    from{
+@keyframes shoot {
+    from {
         transform: translateX(0);
     }
+
     to {
         transform: translateX(-15px);
     }
 }
 
-#bullets{
+#bullets {
     animation: bullets 0.5s ease-in-out 5;
 }
 
-@keyframes bullets{
-    from{
+@keyframes bullets {
+    from {
         opacity: 1;
         transform: translateX(0);
     }
-    to{
+
+    to {
         opacity: 0;
         transform: translateX(35vw);
     }
 }
 
-#house{
+#house {
     animation: updown 0.5s ease-in-out 5;
 }
 
-@keyframes updown{
-    from{
+@keyframes updown {
+    from {
         transform: translateY(0);
     }
+
     to {
         transform: translateY(8px);
     }
 }
 
-#shot-effects{
+#shot-effects {
     animation: flash 0.5s ease-in-out 5;
     opacity: 0;
 }
 
-@keyframes flash{
+@keyframes flash {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -201,4 +205,3 @@
     text-align: center;
     color: inherit;
 }
-

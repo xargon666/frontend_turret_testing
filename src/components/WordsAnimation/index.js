@@ -2,34 +2,34 @@ import React, { useState, useEffect } from 'react';
 import './style.css';
 
 export default function WordsAnim(props) {
-    const [phrase, setPhrase] = useState([]);  
-        
-    let i = 0; 
-    let arr = [];
+  const [phrase, setPhrase] = useState([]);
 
-    function handleMessage() {
-        let message = props.phrase;
+  let i = 0;
+  let arr = [];
 
-        setTimeout(() => {
-          arr.push(message[i]);
-          setPhrase(arr.toString().split(","));
+  function handleMessage() {
+    let message = props.phrase;
 
-          i++;
-          
-          if (i < message.length) {
-            handleMessage();
-          }
-        }, 500)
-    } 
+    setTimeout(() => {
+      arr.push(message[i]);
+      setPhrase(arr.toString().split(","));
 
-    useEffect(() => {
+      i++;
+
+      if (i < message.length) {
         handleMessage();
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+      }
+    }, 500)
+  }
+
+  useEffect(() => {
+    handleMessage();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div>
-        <p>{phrase}</p>
+      <p className='word-anim-content'>{phrase}</p>
     </div>
   )
 }
